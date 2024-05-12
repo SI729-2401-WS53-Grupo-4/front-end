@@ -22,7 +22,7 @@ export const routes: Routes = [
 
   {path:'profile', component:ProfileInputsComponent},
   {path:'plan-options', component:PlanOptionsComponent},
-  { path: '', redirectTo: 'tour-list', pathMatch: 'full' }];
+  { path: '', redirectTo: 'home', pathMatch: 'full' }];
 
 
 @NgModule({
