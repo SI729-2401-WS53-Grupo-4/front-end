@@ -1,0 +1,94 @@
+<div class="container">
+<mat-grid-list cols="3" rowHeight="2:2.5">
+  <mat-grid-tile>
+    <img class="image"alt="" src="./assets/FotoPerfil.jpg" />
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div>
+      <b>Nombre</b>
+      <div></div>
+      <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <div></div>
+      <b>Apellido</b>
+      <div></div>
+      <mat-form-field>
+        <mat-label>Apellido</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <div></div>
+      <b>Correo</b>
+      <div></div>
+      <mat-form-field>
+        <mat-label>Correo</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <div></div>
+      <b>Celular</b>
+      <div></div>
+      <mat-form-field>
+        <mat-label>Celular</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <div></div>
+      <b>Fecha de nacimiento</b>
+      <div></div>
+      <mat-form-field>
+        <mat-label>Fecha de nacimiento</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <div></div>
+      <b>Ubicacion</b>
+      <div></div>
+      <mat-form-field>
+        <mat-label>Ubicación</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div>
+      <b>Método de pago</b>
+      <div></div>
+      <mat-form-field>
+        <mat-label>Método de pago</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <div></div>
+      <b>Plan de suscripción</b>
+      <div></div>
+      <mat-form-field>
+        <mat-label>Plan de suscripción</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <div></div>
+      <button mat-flat-button color="accent">Ver reservados</button>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+</div>
+<mat-grid-list cols="3" rowHeight="2:1">
+  <mat-grid-tile>
+    <div>
+      <button mat-flat-button color="accent">Editar perfil</button>
+      <div></div>
+      <button mat-flat-button [routerLink]="'/home'" color="accent">Back</button>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div>
+      <button mat-flat-button color="accent">Editar contraseña</button>
+      <div></div>
+      <button mat-flat-button [routerLink]="'/plan-options'" routerLinkActive="active" color="accent">Comprar plan premium</button>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div>
+      <button mat-flat-button color="accent">Añadir/Editar método de pago</button>
+      <div></div>
+      <button mat-flat-button color="accent">Cerrar sesión</button>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

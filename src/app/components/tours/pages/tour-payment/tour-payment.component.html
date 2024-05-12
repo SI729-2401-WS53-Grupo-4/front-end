@@ -1,0 +1,66 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+  />
+</head>
+<body>
+<div class="container">
+  <div class="first-block">
+    <div class="first-child">
+      <div class="first-child-up">
+        <h1 class="title">{{ tour.title }}</h1>
+      </div>
+      <div class="first-child-down">
+        <div class="left-column">
+          <div class="tour-guide">
+            <div class="guide">
+              <p>Con {{ tour.guide }}</p>
+            </div>
+            <div class="date">
+              <p>{{ tour.date }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="right-column">
+          <div class="price-people">
+            <div class="price"><p>Empieza desde $ {{ tour.minPrice }}</p></div>
+            <div class="people"><p>Personas: {{ tour.currentPeople }}</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="second-child">
+      <div class="image">
+        <img mat-card-image [src]="tour.image" alt="Tour image">
+      </div>
+    </div>
+  </div>
+  <div class="second-block">
+    <div class="text-d">
+      <p>{{tour.infoDescription}}</p>
+    </div>
+  </div>
+  <div class="choose-time">
+    <div class="choose-time-title">
+      <h2>Choose your time!</h2>
+    </div>
+    <div class="choose-time-content">
+      <ng-container *ngFor="let time of tour.times">
+        <div class="time">
+          <div class="time-up">
+            <p>{{ time }}</p>  <i class='bx bxs-check-circle' style="font-size: 2rem"></i>
+          </div>
+          <div class="time-down">
+            <p>4 horas</p> <p>$150</p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+</body>
+<footer>
+  <button mat-stroked-button [routerLink]="'/tour-list'" routerLinkActive="active" class="boton" style="color:white;">Volver</button>
+  <button mat-stroked-button [routerLink]="'/tour-payment-confirm'" routerLinkActive="active" class="boton" style="color:white;">Reserva ahora</button>
+</footer>

@@ -1,0 +1,153 @@
+.mat-spacer {
+  flex: 1 1 auto;
+}
+.mat-toolbar {
+  background-color: #545454;
+  color: white;
+}
+.titulo{
+  text-align: center;
+  height: 90px;
+  font-weight: revert;
+  font-size: 80px;
+  margin-top: 30px;
+  color: white;
+}
+
+.contenedor-principal {
+  display: flex;
+}
+.contenedor-secundario {
+  display: flex;
+}
+.contenedor {
+  width:670px;
+  height:690px;
+  margin-left:  50px;
+  button{
+    height:90px;
+    width:300px;
+    background-color:#E82574;
+    font-size:40px;
+    color:white;
+    margin-left:80px;
+    border-radius: 04%;
+  }
+}
+.imgcenter{
+  border-radius: 02%;
+}
+
+.tc{
+  h1{
+    font-size: 60px;
+    font-weight: initial;
+  }
+  h2{
+    font-size: 30px;
+  }
+  background-color: #545454;
+  color:white;
+  text-align: center;
+  border-radius: 02%;
+
+}
+
+.contenedor2 {
+  width:670px;
+  height:690px;
+  margin-left: 160px;
+  button{
+    height:90px;
+    width:300px;
+    background-color:#E82574;
+    font-size:40px;
+    color:white;
+    margin-left:90px;
+    border-radius: 04%;
+  }
+}
+
+.contenedor3 {
+  max-width: 600px;
+  margin-left: 180px;
+  button{
+    height:90px;
+    width:300px;
+    background-color:#E82574;
+    font-size:40px;
+    color:white;
+    margin-left:100px;
+    border-radius: 04%;
+  }
+}
+
+.contenedor4 {
+  width:670px;
+  height:690px;
+  margin-left:  50px;
+  button{
+    height:90px;
+    width:300px;
+    background-color:#E82574;
+    font-size:40px;
+    color:white;
+    margin-left:80px;
+    border-radius: 04%;
+  }
+}
+
+.contenedor5 {
+  width:670px;
+  height:630px;
+  margin-left: 160px;
+  button{
+    height:90px;
+    width:300px;
+    background-color:#E82574;
+    font-size:40px;
+    color:white;
+    margin-left:90px;
+    border-radius: 04%;
+  }
+}
+
+.contenedor6{
+  width:600px;
+  height:630px;
+  margin-left: 180px;
+  button{
+    height:90px;
+    width:300px;
+    background-color:#E82574;
+    font-size:40px;
+    color:white;
+    margin-left:100px;
+    border-radius: 04%;
+  }
+}
+
+
+.botones{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  img{
+    margin-left:20px;
+  }
+}
+
+.back{
+  display: flex;
+  margin-left:20px;
+  button{
+    height:90px;
+    width:200px;
+    background-color:#E82574;
+    font-size:40px;
+    color:white;
+  }
+  img{
+    margin-left:2040px;
+  }
+}

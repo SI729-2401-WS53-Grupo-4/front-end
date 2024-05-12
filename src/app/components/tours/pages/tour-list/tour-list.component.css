@@ -1,0 +1,143 @@
+body {
+
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+footer{
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+}
+.title2{
+  text-align: center;
+  height: 30px;
+  font-weight: revert;
+  font-size: 50px;
+  margin-top: 30px;
+}
+.search{
+  /*background-color: red;*/
+}
+.title-container{
+  color:white;
+}
+.input{
+  font-size: 1.1rem;
+  outline:none;
+  border:none;
+  background:inherit;
+  min-width: 1px;
+}
+.card-tour {
+  background-color: #545454;
+  text-align: center;
+  margin-right: 30px;
+  padding: 5px 15px 5px 15px;
+  border-radius: 10px;
+}
+.boton{
+  background-color: #e82574;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  font-size: 1.14rem;
+}
+.boton:hover {
+  background-color: #a11950;
+}
+img {
+  border-radius: 10px;
+}
+text{
+  color: white;
+}
+.textboton{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.stars-container{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.info-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.info-container p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.buscador-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  padding: 2em 14em;
+}
+
+.title-container h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.filter-container {
+  display: flex;
+}
+
+.search-input {
+  padding: 0.5em;
+  margin-right: 0.5em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+  outline: none;
+}
+
+.search-select {
+  padding: 0.5em;
+  margin-right: 0.5em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+  outline: none;
+  cursor: pointer;
+}
+
+.search-button {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  color: white;
+  background-color: #e82574;
+  border: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #a11950;
+}
