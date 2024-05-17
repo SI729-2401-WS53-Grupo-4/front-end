@@ -6,6 +6,7 @@ import { TourPaymentComponent} from "./components/tours/pages/tour-payment/tour-
 import { TourListComponent } from "./components/tours/pages/tour-list/tour-list.component";
 import { TourPaymentConfirmComponent } from "./components/tours/pages/tour-payment-confirm/tour-payment-confirm.component";
 import { TourPaymentProcessComponent } from "./components/tours/pages/tour-payment-process/tour-payment-process.component";
+import { TourPaymentDeniedComponent} from "./components/tours/pages/tour-payment-denied/tour-payment-denied.component";
 import { RestaurantListComponent} from "./components/restaurante/page/restaurant-list/restaurant-list.component";
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
@@ -17,6 +18,7 @@ export const routes: Routes = [
   {path:'tour-list', component:TourListComponent},
   {path:'tour-payment-confirm',component:TourPaymentConfirmComponent},
   {path:'tour-payment-process',component:TourPaymentProcessComponent},
+  {path:'tour-payment-denied',component:TourPaymentDeniedComponent},
 
   {path:'restaurant-list',component:RestaurantListComponent},
 

@@ -26,7 +26,7 @@
   align-items: center; /* align item vertically */
 }
 footer{
-position: fixed;
+  position: fixed;
   left: 30px;
   bottom: 30px;
 }
@@ -50,4 +50,3 @@ position: fixed;
   color: white;
   font-family: 'Open Sans', sans-serif;
 }
-

@@ -1,10 +1,25 @@
 <body>
 <div class="container">
 <div class="info-payment">
-
-</div>
-  <div class="payment">
-
-  </div>
-</div>
+    <div>
+  <h1 class="title1">Payment</h1>
+    </div>
+    <div class="text">
+    <p>Credit/Debit card</p>
+    </div>
+    <div class="image">
+      <img mat-card-image [src]="tour.image" alt="Tour image">
+    </div>
+    <div>
+      <h1 class="title2">{{ tour.title }}</h1>
+    </div>
+    <div>
+      <p class="total">Total: $150</p>
+    </div>
+    </div>
+ </div>
 </body>
+<footer>
+  <button mat-stroked-button [routerLink]="'/tour-payment'" routerLinkActive="active" class="boton" style="color:white;">Volver</button>
+  <button mat-stroked-button [routerLink]="'/tour-payment-confirm'" routerLinkActive="active" class="boton" style="color:white;">Pagar</button>
+</footer>
