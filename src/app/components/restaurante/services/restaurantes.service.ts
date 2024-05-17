@@ -24,7 +24,9 @@ export class RestaurantsService {
       image: 'https://media-cdn.tripadvisor.com/media/photo-s/29/13/b7/5a/terraza.jpg',
       description: 'Ofrecemos comida peruana moderna, con sabores típicos y sensaciones nuevas en el público.',
       bookingLink: '/restaurant-booking'
-    },
+    }
+  ]);
+  private restaurantSubject_2 = new BehaviorSubject<Restaurante[]>([
     {
       title: 'Xoma Gastronómico',
       image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/63/96/1d/minimalismo-en-restauracion.jpg?w=1200&h=-1&s=1',
@@ -43,11 +45,13 @@ export class RestaurantsService {
       description: 'Descubra la deliciosa comida peruana y disfrute de las extraordinarias vistas al océano Pacífico en una de las mejores opciones gastronómicas de Lima.',
       bookingLink: '/restaurant-booking'
     }
-  ]);
-
+  ])
   constructor() { }
 
   getRestaurants(): Observable<Restaurante[]> {
     return this.restaurantSubject.asObservable();
+  }
+  getRestaurants_2(): Observable<Restaurante[]> {
+    return this.restaurantSubject_2.asObservable();
   }
 }

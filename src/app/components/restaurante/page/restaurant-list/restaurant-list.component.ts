@@ -27,15 +27,19 @@ import { NgOptimizedImage } from '@angular/common'; // Asegúrate de tener NgOpt
 })
 export class RestaurantListComponent implements OnInit {
   restaurants$: Observable<Restaurante[]>;
+  restaurants_2$: Observable<Restaurante[]>;
 
   constructor(private restaurantsService: RestaurantsService) {
     this.restaurants$ = this.restaurantsService.getRestaurants();
+    this.restaurants_2$ = this.restaurantsService.getRestaurants_2();
   }
 
   ngOnInit() {
     // No necesitas inicializar `restaurants$` aquí porque ya se inicializó en el constructor
   }
-
+  redirectToBooking(url:string):void{
+    window.location.href=url;
+  }
   cambiarImagen(event: any) {
     var img = event.target as HTMLImageElement;
     if (img && img.src && img.src.includes('favorite.png')) {

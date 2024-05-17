@@ -18,7 +18,25 @@
         <h2>{{ restaurant.description }}</h2>
         <br><br>
         <div class="botones">
-          <button mat-flat-button [routerLink]="restaurant.bookingLink">Book Now</button>
+          <button mat-flat-button (click)="redirectToBooking(restaurant.bookingLink)">Book Now</button>
+          <img class="botonFavorito" src="/assets/favorite.png" alt="botonfavorito" width="70" height="70" (click)="cambiarImagen($event)">
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<div class="contenedor-secundario">
+  <div class="contenedor" *ngFor="let restaurant of restaurants_2$ | async">
+    <mat-card>
+      <mat-card-content class="tc">
+        <img class="imgcenter" [src]="restaurant.image" [alt]="restaurant.title" width="540" height="347">
+        <br><br>
+        <h1>{{ restaurant.title }}</h1>
+        <br>
+        <h2>{{ restaurant.description }}</h2>
+        <br><br>
+        <div class="botones">
+          <button mat-flat-button (click)="redirectToBooking(restaurant.bookingLink)">Book Now</button>
           <img class="botonFavorito" src="/assets/favorite.png" alt="botonfavorito" width="70" height="70" (click)="cambiarImagen($event)">
         </div>
       </mat-card-content>
