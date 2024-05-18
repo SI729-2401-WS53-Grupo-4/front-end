@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';import { TourInfoComponent} from "./components/tours/pages/tour-info/tour-info.component";
 import { ProfileInputsComponent } from "./components/profile/components/profile-inputs/profile-inputs.component";
+import { EditProfileComponent } from "./components/profile/components/edit-profile/edit-profile.component";
 import { PlanOptionsComponent } from "./components/plan/components/plan-options/plan-options.component";
 import { TourPaymentComponent} from "./components/tours/pages/tour-payment/tour-payment.component";
 import { TourListComponent } from "./components/tours/pages/tour-list/tour-list.component";
@@ -21,6 +22,7 @@ export const routes: Routes = [
   {path:'restaurant-list',component:RestaurantListComponent},
 
   {path:'profile', component:ProfileInputsComponent},
+  {path:'edit-profile', component:EditProfileComponent},
   {path:'plan-options', component:PlanOptionsComponent},
   { path: '', redirectTo: 'tour-list', pathMatch: 'full' }];
 

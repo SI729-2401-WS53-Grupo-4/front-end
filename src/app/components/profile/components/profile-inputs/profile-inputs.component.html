@@ -1,51 +1,33 @@
 <div class="container">
-<mat-grid-list cols="3" rowHeight="2:2.5">
+  <mat-grid-list cols="3" rowHeight="2:2.5">
   <mat-grid-tile>
     <img class="image"alt="" src="./assets/FotoPerfil.jpg" />
   </mat-grid-tile>
-  <mat-grid-tile>
+  <mat-grid-tile *ngFor="let usuario of data">
     <div>
       <b>Nombre</b>
       <div></div>
-      <mat-form-field>
-        <mat-label>Nombre</mat-label>
-        <input matInput>
-      </mat-form-field>
+      <p>{{ usuario.nombre }}</p>
       <div></div>
       <b>Apellido</b>
       <div></div>
-      <mat-form-field>
-        <mat-label>Apellido</mat-label>
-        <input matInput>
-      </mat-form-field>
+      <p>{{ usuario.apellido }}</p>
       <div></div>
       <b>Correo</b>
       <div></div>
-      <mat-form-field>
-        <mat-label>Correo</mat-label>
-        <input matInput>
-      </mat-form-field>
+      <p>{{ usuario.correo }}</p>
       <div></div>
       <b>Celular</b>
       <div></div>
-      <mat-form-field>
-        <mat-label>Celular</mat-label>
-        <input matInput>
-      </mat-form-field>
+      <p>{{ usuario.celular }}</p>
       <div></div>
       <b>Fecha de nacimiento</b>
       <div></div>
-      <mat-form-field>
-        <mat-label>Fecha de nacimiento</mat-label>
-        <input matInput>
-      </mat-form-field>
+      <p>{{ usuario.fecha }}</p>
       <div></div>
       <b>Ubicacion</b>
       <div></div>
-      <mat-form-field>
-        <mat-label>Ubicación</mat-label>
-        <input matInput>
-      </mat-form-field>
+      <p>{{ usuario.ubicacion }}</p>
     </div>
   </mat-grid-tile>
   <mat-grid-tile>
@@ -72,7 +54,7 @@
 <mat-grid-list cols="3" rowHeight="2:1">
   <mat-grid-tile>
     <div>
-      <button mat-flat-button color="accent">Editar perfil</button>
+      <button mat-flat-button [routerLink]="'/edit-profile'" routerLinkActive="active" color="accent">Editar perfil</button>
       <div></div>
       <button mat-flat-button [routerLink]="'/home'" color="accent">Back</button>
     </div>
