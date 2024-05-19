@@ -17,13 +17,13 @@ export class RestaurantsService {
       title: 'Awicha',
       image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/85/10/35/magret-de-pato-rostizado.jpg?w=1200&h=-1&s=1',
       description: 'Vive la experiencia de comer a las afueras en una casa barranca de Lima. Sumérgete en esta aventura natural.',
-      bookingLink: '/restaurant-booking'
+      bookingLink: 'https://www.awicharestaurante.com/'
     },
     {
       title: 'Maras Restaurant',
       image: 'https://media-cdn.tripadvisor.com/media/photo-s/29/13/b7/5a/terraza.jpg',
       description: 'Ofrecemos comida peruana moderna, con sabores típicos y sensaciones nuevas en el público.',
-      bookingLink: '/restaurant-booking'
+      bookingLink: 'https://www.marriott.com/en-us/hotels/limdt-jw-marriott-hotel-lima/dining/?scid=f2ae0541-1279-4f24-b197-a979c79310b0'
     }
   ]);
   private restaurantSubject_2 = new BehaviorSubject<Restaurante[]>([
@@ -31,13 +31,13 @@ export class RestaurantsService {
       title: 'Xoma Gastronómico',
       image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/63/96/1d/minimalismo-en-restauracion.jpg?w=1200&h=-1&s=1',
       description: 'Restaurante refinado y elegante que ofrece cocina tradicional con un toque moderno, además de cocteles y vino.',
-      bookingLink: '/restaurant-booking'
+      bookingLink: 'https://xoma.pe/'
     },
     {
       title: 'Osaka Pardo y Aliaga',
       image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/9d/92/de/iluminacion-calida-influencia.jpg?w=1200&h=-1&s=1',
       description: 'Cadena de comedores con gastronomía sofisticada en la que se ofrece cocina fusión asiática y peruana y cocteles.',
-      bookingLink: '/restaurant-booking'
+      bookingLink: 'https://www.osakanikkei.com/es/local/lima'
     },
     {
       title: 'La Vista Restaurant',
