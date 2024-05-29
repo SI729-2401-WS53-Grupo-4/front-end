@@ -43,7 +43,7 @@ export class RestaurantsService {
       title: 'La Vista Restaurant',
       image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/54/65/66/en-la-vista-puedes-pasar.jpg?w=1200&h=-1&s=1',
       description: 'Descubra la deliciosa comida peruana y disfrute de las extraordinarias vistas al océano Pacífico en una de las mejores opciones gastronómicas de Lima.',
-      bookingLink: '/restaurant-booking'
+      bookingLink: 'https://www.mesa247.pe/lima/restaurante/la_vista'
     }
   ])
   constructor() { }

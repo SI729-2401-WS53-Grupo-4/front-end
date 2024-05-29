@@ -40,6 +40,15 @@ export class RestaurantListComponent implements OnInit {
   redirectToBooking(url:string):void{
     window.location.href=url;
   }
+  openLinkInNewTab() {
+    const activeElement = document.activeElement as HTMLElement | null;
+    if (activeElement) {
+      const link = activeElement.getAttribute('routerLink');
+      if (link) {
+        window.open(link, '_blank');
+      }
+    }
+  }
   cambiarImagen(event: any) {
     var img = event.target as HTMLImageElement;
     if (img && img.src && img.src.includes('favorite.png')) {

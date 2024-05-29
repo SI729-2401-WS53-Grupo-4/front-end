@@ -45,6 +45,7 @@ footer{
   color: white;
   padding: 5px 10px 5px 10px;
   font-size: 1.14rem;
+  margin-right: 05px;
 }
 .boton:hover {
   background-color: #a11950;

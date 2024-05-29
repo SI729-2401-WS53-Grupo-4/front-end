@@ -9,14 +9,14 @@
   <div class="title-container">
     <h2>Tours</h2>
   </div>
-  <div class="filter-container">
-    <input type="text" class="search-input" placeholder="Food Tour">
-    <select class="search-select">
+  <form [formGroup]="searchForm" class="filter-container" (ngSubmit)="onSearch()">
+    <input type="text" class="search-input" placeholder="Food Tour" formControlName="searchText">
+    <select class="search-select" formControlName="searchFilter">
       <option value="duration">Duración</option>
       <option value="alfabeth">Alfabetico</option>
     </select>
-    <button class="search-button">Buscar</button>
-  </div>
+    <button type="submit" class="search-button">Buscar</button>
+  </form>
 </div>
 <div class="container">
   <mat-card *ngFor="let tour of tours" class="card-tour">

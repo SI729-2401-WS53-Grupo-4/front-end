@@ -5,17 +5,19 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {Router, RouterLink, RouterLinkActive} from "@angular/router";
 import {NgForOf, NgIf} from "@angular/common";
+import {OnInit} from "@angular/core";
 import {ToursService} from "../../services/tours.service";
+import {FormBuilder, FormGroup, ReactiveFormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-tour-list',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, MatIconModule, MatTooltipModule, RouterLink, RouterLinkActive, NgForOf, NgIf],
+  imports: [MatCardModule, MatButtonModule, MatIconModule, MatTooltipModule, RouterLink, RouterLinkActive, NgForOf, NgIf, ReactiveFormsModule],
   templateUrl: './tour-list.component.html',
   styleUrls: ['./tour-list.component.css']
 })
-export class TourListComponent {
-  tours = [
+export class TourListComponent implements OnInit{
+  tours: any[] = [
     {
       title: 'Coast Tour',
       image: 'https://i0.wp.com/comidasperuanas.com.pe/wp-content/uploads/2023/06/causa-rellena-de-pollo-2.jpg?fit=1900%2C1200&ssl=1',
@@ -72,7 +74,35 @@ export class TourListComponent {
     },
 
   ];
-  constructor(private tourService: ToursService, private router: Router) {}
+  filteredTours:any[]=[];
+  searchForm: FormGroup = this.fb.group({
+    searchText: [''],
+    searchFilter: ['duration']
+  });
+  constructor(private tourService: ToursService, private router: Router, private fb:FormBuilder) {}
+
+  ngOnInit() {
+    this.filteredTours=[...this.tours];
+    console.log('Initial tours:', this.tours);
+    console.log('Initial filtered tours:', this.filteredTours);
+  }
+
+  onSearch(): void{
+    const{searchText, searchFilter}= this.searchForm.value;
+    console.log('Search Text:', searchText);
+    console.log('Search Filter:', searchFilter);
+    let filtered=[...this.tours];
+    if (searchText){
+      filtered = filtered.filter(tour =>tour.title.toLowerCase().includes(searchText.toLowerCase()));
+    }
+    if (searchFilter === 'duration') {
+      filtered.sort((a, b) => a.duration - b.duration);
+    } else if (searchFilter === 'alfabeth') {
+      filtered.sort((a, b) => a.title.localeCompare(b.title));
+    }
+    this.filteredTours = filtered;
+    console.log('Filtered Tours:', this.filteredTours);
+  }
 
   onMoreInfo(tour: any) {
     this.tourService.setTourData(tour);

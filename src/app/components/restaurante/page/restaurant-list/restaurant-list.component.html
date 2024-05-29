@@ -18,7 +18,10 @@
         <h2>{{ restaurant.description }}</h2>
         <br><br>
         <div class="botones">
-          <button mat-flat-button (click)="redirectToBooking(restaurant.bookingLink)">Book Now</button>
+          <button mat-flat-button (click)="redirectToBooking(restaurant.bookingLink)" contextmenu="bookNowMenu">Book Now</button>
+          <menu type="context" id="bookNowMenu">
+            <menuitem label="Open link in new tab" onclick="openLinkInNewTab()"></menuitem>
+          </menu>
         </div>
       </mat-card-content>
     </mat-card>

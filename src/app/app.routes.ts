@@ -9,6 +9,7 @@ import { TourPaymentConfirmComponent } from "./components/tours/pages/tour-payme
 import { TourPaymentProcessComponent } from "./components/tours/pages/tour-payment-process/tour-payment-process.component";
 import { TourPaymentDeniedComponent} from "./components/tours/pages/tour-payment-denied/tour-payment-denied.component";
 import { RestaurantListComponent} from "./components/restaurante/page/restaurant-list/restaurant-list.component";
+import { PlanConfirmComponent} from "./components/plan/components/plan-confirm/plan-confirm.component";
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 
@@ -27,6 +28,7 @@ export const routes: Routes = [
   {path:'profile', component:ProfileInputsComponent},
   {path:'edit-profile', component:EditProfileComponent},
   {path:'plan-options', component:PlanOptionsComponent},
+  {path:'plan-confirm', component:PlanConfirmComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' }];
 
 

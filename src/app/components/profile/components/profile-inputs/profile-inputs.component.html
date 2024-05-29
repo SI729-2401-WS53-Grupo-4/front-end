@@ -56,12 +56,11 @@
     <div>
       <button mat-flat-button [routerLink]="'/edit-profile'" routerLinkActive="active" color="accent">Editar perfil</button>
       <div></div>
-      <button mat-flat-button [routerLink]="'/home'" color="accent">Back</button>
+
     </div>
   </mat-grid-tile>
   <mat-grid-tile>
     <div>
-      <button mat-flat-button color="accent">Editar contraseña</button>
       <div></div>
       <button mat-flat-button [routerLink]="'/plan-options'" routerLinkActive="active" color="accent">Comprar plan premium</button>
     </div>
@@ -70,7 +69,9 @@
     <div>
       <button mat-flat-button color="accent">Añadir/Editar método de pago</button>
       <div></div>
-      <button mat-flat-button color="accent">Cerrar sesión</button>
     </div>
   </mat-grid-tile>
 </mat-grid-list>
+<footer>
+  <button mat-flat-button [routerLink]="'/home'" color="accent">Back</button>
+</footer>
