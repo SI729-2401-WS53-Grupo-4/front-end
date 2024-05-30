@@ -20,7 +20,7 @@ import { RouterModule } from "@angular/router";
 export const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
-
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {path:'', component:MainLayoutComponent,
     children: [
       {path:'home', component:HomeComponent},
