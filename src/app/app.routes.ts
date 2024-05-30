@@ -10,26 +10,36 @@ import { TourPaymentProcessComponent } from "./components/tours/pages/tour-payme
 import { TourPaymentDeniedComponent} from "./components/tours/pages/tour-payment-denied/tour-payment-denied.component";
 import { RestaurantListComponent} from "./components/restaurante/page/restaurant-list/restaurant-list.component";
 import { PlanConfirmComponent} from "./components/plan/components/plan-confirm/plan-confirm.component";
+import {LoginComponent} from "./components/login/login.component";
+import {RegisterComponent} from "./components/register/register.component";
+import {MainLayoutComponent} from "./public/components/main-layout/main-layout.component";
+
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 
 export const routes: Routes = [
-  {path:'home', component:HomeComponent},
+  {path:'login',component:LoginComponent},
+  {path:'register',component:RegisterComponent},
 
-  {path:'tour-info', component:TourInfoComponent},
-  {path:'tour-payment',component:TourPaymentComponent},
-  {path:'tour-list', component:TourListComponent},
-  {path:'tour-payment-confirm',component:TourPaymentConfirmComponent},
-  {path:'tour-payment-process',component:TourPaymentProcessComponent},
-  {path:'tour-payment-denied',component:TourPaymentDeniedComponent},
+  {path:'', component:MainLayoutComponent,
+    children: [
+      {path:'home', component:HomeComponent},
+      {path:'tour-info', component:TourInfoComponent},
+      {path:'tour-payment',component:TourPaymentComponent},
+      {path:'tour-list', component:TourListComponent},
+      {path:'tour-payment-confirm',component:TourPaymentConfirmComponent},
+      {path:'tour-payment-process',component:TourPaymentProcessComponent},
+      {path:'tour-payment-denied',component:TourPaymentDeniedComponent},
 
-  {path:'restaurant-list',component:RestaurantListComponent},
+      {path:'restaurant-list',component:RestaurantListComponent},
 
-  {path:'profile', component:ProfileInputsComponent},
-  {path:'edit-profile', component:EditProfileComponent},
-  {path:'plan-options', component:PlanOptionsComponent},
-  {path:'plan-confirm', component:PlanConfirmComponent},
-  { path: '', redirectTo: 'home', pathMatch: 'full' }];
+      {path:'profile', component:ProfileInputsComponent},
+      {path:'edit-profile', component:EditProfileComponent},
+      {path:'plan-options', component:PlanOptionsComponent},
+      {path:'plan-confirm', component:PlanConfirmComponent},
+      { path: '', redirectTo: 'home', pathMatch: 'full' }
+    ]}];
+
 
 
 @NgModule({
