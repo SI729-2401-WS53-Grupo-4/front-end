@@ -35,7 +35,9 @@ export class TourListComponent implements OnInit{
       date: 'Mon, Aug 23, 2024',
       infoDescription: 'En este tour de 3 horas, aprenderás sobre la historia de la comida peruana, la cultura gastronómica y la cocina peruana. Visitaremos 3 mercados locales y degustaremos la comida peruana. También aprenderás a cocinar platos peruanos y disfrutarás de una caminata por el centro de Lima.',
       times: ['9:00 AM', '12:00 PM'],
-      hours: ['3 horas']
+      hours: ['3 horas'],
+      titleRestaurant: ['Matria Restaurant'],
+      imageRestaurant: ['https://www.theworlds50best.com/discovery/filestore/jpg/Matria_Food.jpg']
     },
     {
       title: 'Lima Food Tour',
@@ -54,7 +56,9 @@ export class TourListComponent implements OnInit{
       date: 'Mon, Apr 21, 2024',
       infoDescription: 'En este tour de 4 horas, aprenderás sobre la historia de la comida peruana, la cultura gastronómica y la cocina peruana. Visitaremos 4 mercados locales y degustaremos la comida peruana. También aprenderás a cocinar platos peruanos y disfrutarás de una caminata por el centro de Lima.',
       times: ['8:00 AM', '3:00 PM'],
-      hours: ['4 horas']
+      hours: ['4 horas'],
+      titleRestaurant: ['Awicha'],
+      imageRestaurant: ['https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/85/10/35/magret-de-pato-rostizado.jpg?w=1200&h=-1&s=1']
     },
     {
       title: 'Barranco Food Tour',
@@ -73,7 +77,9 @@ export class TourListComponent implements OnInit{
       date: 'Mon, Jun 1, 2024',
       infoDescription: 'En este tour de 5 horas, aprenderás sobre la historia de la comida peruana, la cultura gastronómica y la cocina peruana. Visitaremos 2 mercados locales y degustaremos la comida peruana. También aprenderás a cocinar platos peruanos y disfrutarás de una caminata por el centro de Lima.',
       times: ['9:00 AM', '1:00 PM'],
-      hours: ['5 horas']
+      hours: ['5 horas'],
+      titleRestaurant: ['Maras Restaurant'],
+      imageRestaurant: ['https://media-cdn.tripadvisor.com/media/photo-s/29/13/b7/5a/terraza.jpg']
     },
   ]
   tours2: any[] = [
@@ -94,7 +100,9 @@ export class TourListComponent implements OnInit{
       date: 'Mon, Oct 05, 2024',
       infoDescription: 'En este tour de 2 horas, aprenderás sobre la historia de la comida peruana, la cultura gastronómica y la cocina peruana. Visitaremos 3 mercados locales y degustaremos la comida peruana. También aprenderás a cocinar platos peruanos y disfrutarás de una caminata por el centro de Lima.',
       times: ['9:00 AM', '11:00 PM'],
-      hours: ['2 horas']
+      hours: ['2 horas'],
+      titleRestaurant: ['Xoma Gastronómico'],
+      imageRestaurant: ['https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/63/96/1d/minimalismo-en-restauracion.jpg?w=1200&h=-1&s=1']
     },
     {
       title: 'Tumbes Food Tour',
@@ -113,7 +121,9 @@ export class TourListComponent implements OnInit{
       date: 'Mon, Jun 15, 2024',
       infoDescription: 'En este tour de 4 horas, aprenderás sobre la historia de la comida peruana, la cultura gastronómica y la cocina peruana. Visitaremos 4 mercados locales y degustaremos la comida peruana. También aprenderás a cocinar platos peruanos y disfrutarás de una caminata por el centro de Lima.',
       times: ['8:00 AM', '3:00 PM'],
-      hours: ['4 horas']
+      hours: ['4 horas'],
+      titleRestaurant: ['Osaka Pardo y Aliaga'],
+      imageRestaurant: ['https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/9d/92/de/iluminacion-calida-influencia.jpg?w=1200&h=-1&s=1']
     },
     {
       title: 'Sierra Food Tour',
@@ -127,12 +137,14 @@ export class TourListComponent implements OnInit{
       guide: 'Ariana Rodriguez',
       numberOfRatings: 900,
       minPrice: 50,
-      currentPeople: 4,
+      currentPeople: 9,
       itemsIncluded: ['3 Visitas a mercados locales', 'Degustacion de la comida peruana', 'Aprender sobre la cultura gastronomica peruana', 'Realizar una caminata en el centro de Lima','Aprender sobre recetas', 'Clases de cocina'],
       date: 'Mon, Jun 1, 2024',
       infoDescription: 'En este tour de 5 horas, aprenderás sobre la historia de la comida peruana, la cultura gastronómica y la cocina peruana. Visitaremos 2 mercados locales y degustaremos la comida peruana. También aprenderás a cocinar platos peruanos y disfrutarás de una caminata por el centro de Lima.',
       times: ['9:00 AM', '1:00 PM'],
-      hours: ['5 horas']
+      hours: ['5 horas'],
+      titleRestaurant: ['La Vista Restaurant'],
+      imageRestaurant: ['https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/54/65/66/en-la-vista-puedes-pasar.jpg?w=1200&h=-1&s=1']
     },
   ];
   filteredTours:any[]=[];

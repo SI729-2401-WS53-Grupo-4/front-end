@@ -30,23 +30,19 @@
       <p>{{ usuario.ubicacion }}</p>
     </div>
   </mat-grid-tile>
-  <mat-grid-tile>
+  <mat-grid-tile *ngFor="let usuario of data">
     <div>
       <b>Método de pago</b>
       <div></div>
-      <mat-form-field>
-        <mat-label>Método de pago</mat-label>
-        <input matInput>
-      </mat-form-field>
+      <p>{{usuario.method}}</p>
+      <div></div>
       <div></div>
       <b>Plan de suscripción</b>
       <div></div>
-      <mat-form-field>
-        <mat-label>Plan de suscripción</mat-label>
-        <input matInput>
-      </mat-form-field>
+      <p>{{usuario.suscription}}</p>
       <div></div>
-      <button mat-flat-button color="accent">Ver reservados</button>
+      <div></div>
+      <button mat-flat-button color="accent" [routerLink]="'/booking'">Ver reservados</button>
     </div>
   </mat-grid-tile>
 </mat-grid-list>
@@ -67,7 +63,6 @@
   </mat-grid-tile>
   <mat-grid-tile>
     <div>
-      <button mat-flat-button color="accent">Añadir/Editar método de pago</button>
       <div></div>
     </div>
   </mat-grid-tile>

@@ -6,6 +6,8 @@ import {BehaviorSubject} from "rxjs";
 })
 export class ToursService {
   private tourSubject = new BehaviorSubject<any>(null);
+  private toursPagados = new BehaviorSubject<any[]>([]);
+  toursPagados$ = this.toursPagados.asObservable();
 
   constructor() { }
 
@@ -15,6 +17,11 @@ export class ToursService {
 
   getTourData() {
     return this.tourSubject.asObservable();
+  }
+
+  addTourPagado(tour:any){
+    const currentTours = this.toursPagados.value;
+    this.toursPagados.next([...currentTours, tour]);
   }
 }
 

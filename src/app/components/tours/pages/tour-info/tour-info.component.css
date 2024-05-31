@@ -90,6 +90,22 @@ body {
   height: auto;
   border-radius: 10px;
 }
+.restaurant-inclusions .restaurant-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.restaurant-inclusions .title-restaurant p {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 6px;
+}
+.restaurant-inclusions .incluid p {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 20px;
+}
 .second-block{
   margin-top: 1rem;
   margin-bottom: 2rem;

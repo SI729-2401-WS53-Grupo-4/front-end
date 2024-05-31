@@ -6,6 +6,8 @@ export class Usuario {
   celular: string;
   fecha: string;
   ubicacion: string;
+  method: string;
+  suscription: string;
   constructor() {
       this.id = 0;
       this.nombre = "";
@@ -14,5 +16,7 @@ export class Usuario {
       this.celular = "";
       this.fecha = "";
       this.ubicacion = "";
+      this.method = "";
+      this.suscription = "";
     }
 }

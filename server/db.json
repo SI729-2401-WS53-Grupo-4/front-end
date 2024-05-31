@@ -3,11 +3,16 @@
     {
       "id": "1",
       "nombre": "David",
-      "apellido": "Chirinos",
-      "correo": "Danielchirinos@gmail.com",
+      "apellido": "Carrera",
+      "correo": "DavidCarrera@gmail.com",
       "celular": "980371926",
       "fecha": "14/04/1980",
-      "ubicacion": "Lima"
+      "ubicacion": "Lima",
+      "method": "****-****-****-1234",
+      "suscription": "Premium"
     }
+  ],
+  "reserva": [
+
   ]
 }

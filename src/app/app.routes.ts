@@ -12,6 +12,7 @@ import { RestaurantListComponent} from "./components/restaurante/page/restaurant
 import { PlanConfirmComponent} from "./components/plan/components/plan-confirm/plan-confirm.component";
 import {LoginComponent} from "./components/login/login.component";
 import {RegisterComponent} from "./components/register/register.component";
+import {BookingComponent} from "./components/booking/booking.component";
 import {MainLayoutComponent} from "./public/components/main-layout/main-layout.component";
 
 import { NgModule } from "@angular/core";
@@ -37,6 +38,7 @@ export const routes: Routes = [
       {path:'edit-profile', component:EditProfileComponent},
       {path:'plan-options', component:PlanOptionsComponent},
       {path:'plan-confirm', component:PlanConfirmComponent},
+      {path:'booking', component:BookingComponent},
       { path: '', redirectTo: 'home', pathMatch: 'full' }
     ]}];
 

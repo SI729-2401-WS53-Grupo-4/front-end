@@ -107,10 +107,12 @@ text{
   padding: 2em 14em;
 }
 
-.title-container h2 {
-  margin: 0;
-  font-size: 2rem;
+.title-container h1 {
+  font-size: 3rem;
   font-weight: bold;
+  justify-content:center;
+  text-align:center;
+  display:flex;
 }
 
 .filter-container {
