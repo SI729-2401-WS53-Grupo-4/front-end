@@ -26,7 +26,12 @@ export class TourPaymentProcessComponent {
   constructor(private tourService: ToursService, private router:Router) {}
 
   pagar(){
-    this.tourService.addTourPagado({title: this.tour.title, image: this.tour.image});
+    this.tourService.addTourPagado({title: this.tour.title,
+      image: this.tour.image,
+      duration: this.tour.duration,
+      price: this.tour.price})
+      .subscribe(() => {
+    });
   }
 
   ngOnInit() {

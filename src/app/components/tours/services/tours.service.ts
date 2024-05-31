@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject} from "rxjs";
-
+import {environment} from "../../../../environments/environment";
+import {BehaviorSubject, catchError, Observable, throwError} from "rxjs";
+import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 @Injectable({
   providedIn: 'root'
 })
 export class ToursService {
   private tourSubject = new BehaviorSubject<any>(null);
   private toursPagados = new BehaviorSubject<any[]>([]);
-  toursPagados$ = this.toursPagados.asObservable();
+  private endpoint = `${environment.serverBasePath}/reserva`;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   setTourData(tour: any) {
     this.tourSubject.next(tour);
@@ -19,9 +20,16 @@ export class ToursService {
     return this.tourSubject.asObservable();
   }
 
+  getToursPagados():Observable<any[]>{
+    return this.http.get<any[]>(this.endpoint);
+  }
+
   addTourPagado(tour:any){
-    const currentTours = this.toursPagados.value;
-    this.toursPagados.next([...currentTours, tour]);
+    return this.http.post<any>(this.endpoint,tour);
+  }
+
+  deleteTourPagado(id: number): Observable<any>{
+    return this.http.delete<any>(`${this.endpoint}/${id}`)
   }
 }
 
