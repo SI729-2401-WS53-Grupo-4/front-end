@@ -19,20 +19,6 @@
       "image": "https://i0.wp.com/comidasperuanas.com.pe/wp-content/uploads/2023/06/causa-rellena-de-pollo-2.jpg?fit=1900%2C1200&ssl=1",
       "duration": 3,
       "price": 150
-    },
-    {
-      "id": "255b",
-      "title": "Lima Food Tour",
-      "image": "https://freewalkingtoursperu.com/wp-content/uploads/2020/06/plaza-de-armas-lima-peru-11.jpg",
-      "duration": 4,
-      "price": 150
-    },
-    {
-      "id": "bade",
-      "title": "Barranco Food Tour",
-      "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS4Bf6YFaLeWkOSX9xDXbIpOJGSsrkSIChQwegX8ttbIXJQ0Cg8",
-      "duration": 5,
-      "price": 150
     }
   ]
 }
