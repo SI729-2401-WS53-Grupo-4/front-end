@@ -1,0 +1,153 @@
+body{
+  height: auto;
+}
+
+.container {
+  padding: 20px 40px 20px 40px;
+  text-align: center;
+  color: white;
+}
+
+.first-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-child {
+  flex-grow: 1;
+}
+
+.first-child-up {
+  margin-bottom: 3rem;
+}
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.first-child-down {
+  display: flex;
+}
+
+.left-column, .right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.tour-guide, .price-people{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.guide, .price{
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.date, .people{
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: #e1e1e1;
+  padding: 7px;
+  border-radius: 5px;
+}
+.date p{
+  margin: 0;
+}
+.right-column{
+  align-items: center;
+}
+.people p{
+  margin: 0;
+}
+
+.second-child {
+  flex-basis: 400px;
+  padding: 10px;
+}
+
+.second-child .image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.choose-time-title{
+  color: black;
+}
+
+.second-block{
+  margin-bottom: 1rem;
+  justify-content: start;
+}
+.text-d p{
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  text-align: left;
+  padding-right: 24rem;
+}
+.choose-time{
+  background-color: #e1e1e1;
+  border: 1px solid #3d3d3d;
+  padding: 2rem;
+}
+.choose-time-title h2{
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.choose-time-content {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan si no hay suficiente espacio */
+}
+
+.time {
+  background-color: #b6b6b6;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.time-up, .time-down {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.time-up{
+  margin-bottom: 20px;
+}
+
+.time-up p, .time-down p {
+  font-size: 1.3rem;
+  margin: 0;
+  padding-right: 10px;
+  font-weight: 500;
+}
+.time-up p{
+  margin-right: 40px;
+}
+.boton{
+  background-color: #e82574;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  font-size: 1.14rem;
+  margin: 10px;
+}
+.boton:hover {
+  background-color: #a11950;
+}
+footer{
+  padding: 20px;
+  justify-content: space-evenly;
+  border-radius: 10px;
+}

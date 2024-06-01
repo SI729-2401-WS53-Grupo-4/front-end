@@ -1,0 +1,57 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+  />
+</head>
+<body>
+<br>
+<h1 class="titulo">Restaurants</h1>
+<div class="contenedor-principal">
+  <div class="contenedor" *ngFor="let restaurant of restaurants$ | async">
+    <mat-card>
+      <mat-card-content class="tc">
+        <img class="imgcenter" [src]="restaurant.image" [alt]="restaurant.title" width="540" height="347">
+        <br><br>
+        <h1>{{ restaurant.title }}</h1>
+        <br>
+        <h2>{{ restaurant.description }}</h2>
+        <br><br>
+        <div class="botones">
+          <button mat-flat-button (click)="redirectToBooking(restaurant.bookingLink)" contextmenu="bookNowMenu">Visitar</button>
+          <menu type="context" id="bookNowMenu">
+            <menuitem label="Open link in new tab" onclick="openLinkInNewTab()"></menuitem>
+          </menu>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<div class="contenedor-secundario">
+  <div class="contenedor" *ngFor="let restaurant of restaurants_2$ | async">
+    <mat-card>
+      <mat-card-content class="tc">
+        <img class="imgcenter" [src]="restaurant.image" [alt]="restaurant.title" width="540" height="347">
+        <br><br>
+        <h1>{{ restaurant.title }}</h1>
+        <br>
+        <h2>{{ restaurant.description }}</h2>
+        <br><br>
+        <div class="botones">
+          <button mat-flat-button (click)="redirectToBooking(restaurant.bookingLink)">Visitar</button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+</body>
+<br><br><br><br><br><br><br><br>
+
+<footer>
+  <div class="back">
+    <button [routerLink]="'/home'" mat-flat-button>Back</button>
+    <br><br>
+    <br><br>
+    <br><br>
+  </div>
+</footer>

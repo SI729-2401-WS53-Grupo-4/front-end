@@ -1,0 +1,83 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+  />
+</head>
+<body>
+<div class="container">
+
+  <div class="first-block">
+    <div class="first-child">
+      <div class="first-child-up">
+        <h1 class="title">{{ tour.title }}</h1>
+      </div>
+      <div class="first-child-down">
+        <div class="left-column">
+          <div class="tour-guide">
+            <p>Con {{ tour.guide }}</p>
+            <div class="stars-and-count">
+              <div class="rating">
+                <ng-container *ngFor="let _ of Array(5).fill(0); let i = index">
+                  <ng-container *ngIf="i < Math.floor(tour.rating)">
+                    <i class='bx bxs-star' style="font-size: 3em; color: #444444; padding: 6px;"></i>
+                  </ng-container>
+                  <ng-container *ngIf="i == Math.floor(tour.rating) && tour.rating % 1 !== 0">
+                    <i class='bx bxs-star-half' style="font-size: 3em; color: #444444; padding: 6px;"></i>
+                  </ng-container>
+                  <ng-container *ngIf="i >= Math.ceil(tour.rating)">
+                    <i class='bx bx-star' style="font-size: 3em; color: #444444; padding: 6px;"></i>
+                  </ng-container>
+                </ng-container>
+              </div>
+              <span class="ratings-count">{{ tour.numberOfRatings }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="right-column">
+          <div class="price-people">
+            <div class="price"><p>Empieza desde $ {{ tour.minPrice }}</p></div>
+            <div class="people"><p>Personas en el tour: {{ tour.currentPeople }}</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="second-child">
+      <div class="image">
+        <img mat-card-image [src]="tour.image" alt="Tour image">
+      </div>
+    </div>
+  </div>
+  <div class="second-block">
+    <div class="additional-info">
+      <p><i class='bx bxs-group' style="font-size: 4rem"></i> Maximo {{ tour.maxPeople }} personas</p>
+      <p><i class='bx bxs-message-rounded-dots' style="font-size: 4rem"></i> {{ tour.language }}</p>
+      <p><i class='bx bxs-time-five' style="font-size: 4rem"></i> Duración {{ tour.duration }} horas </p>
+    </div>
+  </div>
+
+  <div class="tour-inclusions">
+    <div class="title-inclusions">
+      <p>Este paquete incluye:</p>
+    </div>
+    <ul>
+      <li *ngFor="let item of tour.itemsIncluded"><i class='bx bxs-circle'></i> {{ item }}</li>
+    </ul>
+  </div>
+<div class="restaurant-inclusions">
+  <div class="incluid">
+    <p>Restaurantes que incluyen en este paquete:</p>
+  </div>
+  <div class="restaurant-image">
+  <img mat-card-image [src]="tour.imageRestaurant" alt="Restaurant image">
+  </div>
+  <div class="title-restaurant">
+  <p> {{tour.titleRestaurant}}</p>
+  </div>
+</div>
+</div>
+</body>
+
+<footer>
+  <button mat-stroked-button [routerLink]="'/tour-list'" routerLinkActive="active" class="boton" style="color:white;">Volver</button>
+</footer>

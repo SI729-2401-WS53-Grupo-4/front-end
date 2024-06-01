@@ -1,0 +1,172 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  height: auto;
+}
+
+.container {
+  padding: 20px 40px 20px 40px;
+  text-align: center;
+  color: white;
+}
+
+.first-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-child {
+  flex-grow: 1;
+}
+
+.first-child-up {
+  margin-bottom: 3rem;
+}
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.first-child-down {
+  display: flex;
+}
+
+.left-column, .right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.tour-guide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tour-guide p{
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.stars-and-count {
+  display: flex;
+  align-items: center;
+}
+
+.ratings-count {
+  font-size: 1.8em;
+  margin-left: 10px;
+}
+
+.right-column{
+  align-items: center;
+}
+.price{
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.people {
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: #c4c2c2;
+  padding: 4px;
+  border-radius: 5px;
+}
+.people p{
+  margin: 0;
+}
+
+.second-child {
+  flex-basis: 400px;
+  padding: 10px;
+}
+
+.second-child .image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.restaurant-inclusions .restaurant-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.restaurant-inclusions .title-restaurant p {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 6px;
+}
+.restaurant-inclusions .incluid p {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.second-block{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.second-block .additional-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.second-block .additional-info p {
+  flex: 1;
+  margin: 0 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.tour-inclusions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #333;
+  border-radius: 10px;
+  color: white;
+  padding: 2rem;
+}
+
+.title-inclusions p {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.tour-inclusions ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+}
+
+.tour-inclusions li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.boton{
+  background-color: #e82574;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  font-size: 1.14rem;
+  margin: 10px;
+}
+.boton:hover {
+  background-color: #a11950;
+}

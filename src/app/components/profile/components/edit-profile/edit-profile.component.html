@@ -1,0 +1,57 @@
+<div class="container">
+  <mat-grid-list cols="3" rowHeight="2:2.5">
+    <mat-grid-tile>
+      <img class="image"alt="" src="./assets/FotoPerfil.jpg" />
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div>
+        <form #usuarioForm="ngForm" (ngSubmit)="onSubmit()">
+          <mat-form-field>
+            <mat-label>Nombre</mat-label>
+            <input matInput name="nombre" [(ngModel)]="usuario.nombre" required>
+          </mat-form-field>
+          <div></div>
+          <mat-form-field>
+            <mat-label>Apellido</mat-label>
+            <input matInput name="apellido" [(ngModel)]="usuario.apellido" required>
+          </mat-form-field>
+          <div></div>
+          <mat-form-field>
+            <mat-label>Correo</mat-label>
+            <input matInput name="correo" [(ngModel)]="usuario.correo" type="email" required>
+          </mat-form-field>
+          <div></div>
+          <mat-form-field>
+            <mat-label>Celular</mat-label>
+            <input matInput name="celular" [(ngModel)]="usuario.celular" required>
+          </mat-form-field>
+          <div></div>
+          <mat-form-field>
+            <mat-label>Fecha de nacimiento</mat-label>
+            <input matInput name="fecha" [(ngModel)]="usuario.fecha" required>
+          </mat-form-field>
+          <div></div>
+          <mat-form-field>
+            <mat-label>Ubicación</mat-label>
+            <input matInput name="ubicacion" [(ngModel)]="usuario.ubicacion" required>
+          </mat-form-field>
+          <div></div>
+          <button mat-raised-button color="accent" type="submit">Guardar cambios</button>
+        </form>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+<mat-grid-list cols="3" rowHeight="2:1">
+  <mat-grid-tile>
+    <div>
+      <button mat-flat-button [routerLink]="'/profile'" routerLinkActive="active" color="accent">Back</button>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+  </mat-grid-tile>
+  <mat-grid-tile>
+  </mat-grid-tile>
+</mat-grid-list>

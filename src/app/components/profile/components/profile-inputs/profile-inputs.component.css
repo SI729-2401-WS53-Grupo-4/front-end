@@ -1,0 +1,24 @@
+.mat-grid-tile {
+  background: none;
+}
+.mat-form-field {
+  width: 400px;
+}
+button{
+  margin-bottom: 50px;
+}
+b{
+  font-size: 20px;
+  margin-bottom: 5px;
+  display: block;
+}
+p{
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+.container{
+  color: white;
+}
+.image {
+  border-radius: 6px;
+}

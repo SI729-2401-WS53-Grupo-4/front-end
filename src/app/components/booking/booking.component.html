@@ -1,0 +1,41 @@
+<body>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- Título Column -->
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef> Nombre del Tour </th>
+    <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+  </ng-container>
+  <!-- Imagen Column -->
+  <ng-container matColumnDef="image">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let element">
+      <img mat-card-image [src]="element.image" alt="Tour image" style="width: 100px; height: auto;">
+    </td>
+  </ng-container>
+  <!-- Duración Column -->
+  <ng-container matColumnDef="duration">
+    <th mat-header-cell *matHeaderCellDef> Duración </th>
+    <td mat-cell *matCellDef="let element"> {{element.duration}} Horas </td>
+  </ng-container>
+  <!-- Precio Column -->
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef> Precio </th>
+    <td mat-cell *matCellDef="let element"> ${{element.price}} </td>
+  </ng-container>
+  <!-- Delete Column -->
+  <ng-container matColumnDef="delete">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button (click)="deleteTour(element.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</body>
+<footer>
+  <button mat-stroked-button [routerLink]="'/profile'" routerLinkActive="active" class="boton" style="color:white;">Volver</button>
+</footer>
+

@@ -1,0 +1,24 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "Daniel",
+      "apellido": "Carrera",
+      "correo": "DavidCarrera@gmail.com",
+      "celular": "980371926",
+      "fecha": "14/04/1980",
+      "ubicacion": "Lima",
+      "method": "****-****-****-1234",
+      "suscription": "Premium"
+    }
+  ],
+  "reserva": [
+    {
+      "id": "bc0e",
+      "title": "Coast Food Tour",
+      "image": "https://i0.wp.com/comidasperuanas.com.pe/wp-content/uploads/2023/06/causa-rellena-de-pollo-2.jpg?fit=1900%2C1200&ssl=1",
+      "duration": 3,
+      "price": 150
+    }
+  ]
+}

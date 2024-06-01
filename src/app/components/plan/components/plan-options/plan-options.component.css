@@ -1,0 +1,27 @@
+.c1{
+  background-color: #545454;
+  min-width: 40%;
+}
+
+.c2{
+  background-color: white;
+}
+
+.c3{
+  background-color: #eeeeee;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.mat-divider.mat-divider-vertical {
+  border-right-color: black;
+  height: 450px;
+  border-right-width: 2px;
+}
+
+h1{
+    font-size:30px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }

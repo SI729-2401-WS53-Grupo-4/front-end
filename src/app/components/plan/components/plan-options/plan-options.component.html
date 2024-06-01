@@ -1,0 +1,54 @@
+<mat-card class="c2">
+  <mat-card-content>
+    <mat-card class="c3">
+      <mat-card-content>
+        <mat-card class="c2">
+          <mat-card-content style="display:flex; justify-content: center;">
+            <mat-card class="c1">
+              <mat-card-content>
+                <h1>Free</h1>
+                <mat-card class="c2">
+                  <mat-card-content>
+                    <h3>· Participar hasta 12 personas</h3>
+                    <h3>· Obtiene una visita guiada por 3 restaurantes ofrecidos en el paquete de su preferencia</h3>
+                    <h3>· Recorrido por 1 mercado local incluido en el paquete</h3>
+                    <h3>· No tendrá la posibilidad de realizar consultas en las clases de cocina</h3>
+                    <div></div>
+                    <button mat-flat-button disabled>Plan actual</button>
+                  </mat-card-content>
+                </mat-card>
+              </mat-card-content>
+            </mat-card>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            <mat-divider [vertical]="true"></mat-divider>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            <mat-card class="c1">
+              <mat-card-content>
+                <h1>Premium</h1>
+                <mat-card class="c2">
+                  <mat-card-content>
+                    <h3>· Participar hasta 12 personas</h3>
+                    <h3>· Obtiene una visita guiada por 3 restaurantes ofrecidos en el paquete de su preferencia</h3>
+                    <h3>· Posibilidad de realizar más recorridos de un mercado local</h3>
+                    <h3>· Tendrá la posibilidad de realizar consultas en las clases de cocina</h3>
+                    <h3>· Tendrá la posibilidad de tener 1 tour adicional</h3>
+                    <div></div>
+                    <button mat-flat-button color="accent" [routerLink]="'/plan-confirm'" routerLinkActive="active">Conseguir Plan</button>
+                  </mat-card-content>
+                </mat-card>
+              </mat-card-content>
+            </mat-card>
+          </mat-card-content>
+        </mat-card>
+      </mat-card-content>
+    </mat-card>
+    <div>&nbsp;</div>
+    <button mat-flat-button [routerLink]="'/profile'" routerLinkActive="active" color="accent">Back</button>
+  </mat-card-content>
+</mat-card>
