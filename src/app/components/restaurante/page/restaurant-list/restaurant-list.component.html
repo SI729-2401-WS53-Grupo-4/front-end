@@ -9,11 +9,11 @@
 <h1 class="titulo">Restaurants</h1>
 <div class="contenedor-principal">
   <div class="contenedor" *ngFor="let restaurant of restaurants$ | async">
-    <mat-card>
+    <mat-card class="card-restaurant">
       <mat-card-content class="tc">
-        <img class="imgcenter" [src]="restaurant.image" [alt]="restaurant.title" width="540" height="347">
+        <img class="imgcenter" [src]="restaurant.image" [alt]="restaurant.name" width="540" height="347">
         <br><br>
-        <h1>{{ restaurant.title }}</h1>
+        <h1>{{ restaurant.name }}</h1>
         <br>
         <h2>{{ restaurant.description }}</h2>
         <br><br>
@@ -26,19 +26,20 @@
       </mat-card-content>
     </mat-card>
   </div>
-</div>
-<div class="contenedor-secundario">
-  <div class="contenedor" *ngFor="let restaurant of restaurants_2$ | async">
-    <mat-card>
+  <div class="contenedor" *ngFor="let restaurants of dataR">
+    <mat-card class="card-restaurant">
       <mat-card-content class="tc">
-        <img class="imgcenter" [src]="restaurant.image" [alt]="restaurant.title" width="540" height="347">
+        <img class="imgcenter" [src]="restaurants.image" [alt]="restaurants.name" width="540" height="347">
         <br><br>
-        <h1>{{ restaurant.title }}</h1>
+        <h1>{{ restaurants.name }}</h1>
         <br>
-        <h2>{{ restaurant.description }}</h2>
+        <h2>{{ restaurants.description }}</h2>
         <br><br>
         <div class="botones">
-          <button mat-flat-button (click)="redirectToBooking(restaurant.bookingLink)">Visitar</button>
+          <button mat-flat-button (click)="redirectToBooking(restaurants.bookingLink)" contextmenu="bookNowMenus">Visitar</button>
+          <menu type="context" id="bookNowMenus">
+            <menuitem label="Open link in new tab" onclick="openLinkInNewTab()"></menuitem>
+          </menu>
         </div>
       </mat-card-content>
     </mat-card>

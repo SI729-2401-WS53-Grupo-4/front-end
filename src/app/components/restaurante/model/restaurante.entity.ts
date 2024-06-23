@@ -1,5 +1,5 @@
 export class Restaurante {
-  title: string = '';
+  name: string = '';
   image: string = '';
   description: string = '';
   bookingLink: string = '';

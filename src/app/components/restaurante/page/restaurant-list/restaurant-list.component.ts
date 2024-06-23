@@ -27,15 +27,20 @@ import { NgOptimizedImage } from '@angular/common'; // Asegúrate de tener NgOpt
 })
 export class RestaurantListComponent implements OnInit {
   restaurants$: Observable<Restaurante[]>;
-  restaurants_2$: Observable<Restaurante[]>;
+  dataR: Restaurante[]= [];
 
   constructor(private restaurantsService: RestaurantsService) {
     this.restaurants$ = this.restaurantsService.getRestaurants();
-    this.restaurants_2$ = this.restaurantsService.getRestaurants_2();
+  }
+
+  private getAllRestaurants(){
+     this.restaurantsService.getAll().subscribe((response: any) =>{
+       this.dataR = response;
+     })
   }
 
   ngOnInit() {
-    // No necesitas inicializar `restaurants$` aquí porque ya se inicializó en el constructor
+    this.getAllRestaurants();
   }
   redirectToBooking(url:string):void{
     window.location.href=url;
