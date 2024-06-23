@@ -43,6 +43,40 @@
     </mat-card>
   </div>
 </div>
+<div class="container">
+  <div class="card-container" *ngFor="let tours of dataT">
+    <mat-card class="card-tour">
+      <mat-card-header class="title">
+        <p>{{ tours.titleTour }}</p>
+      </mat-card-header>
+      <img mat-card-image [src]="tours.image" alt="Imagen de lugar del tour" width="300" height="200">
+      <mat-card-content class="text" style="padding: 0">
+        <div class="stars-container">
+          <ng-container *ngFor="let _ of Array(5).fill(0); let i = index">
+            <ng-container *ngIf="i < Math.floor(tours.rating)">
+              <i class='bx bxs-star' style="font-size: 3em; color: #ffffff; padding: 6px;"></i>
+            </ng-container>
+            <ng-container *ngIf="i == Math.floor(tours.rating) && tours.rating % 1 !== 0">
+              <i class='bx bxs-star-half' style="font-size: 3em; color: #ffffff; padding: 6px;"></i>
+            </ng-container>
+            <ng-container *ngIf="i >= Math.ceil(tours.rating)">
+              <i class='bx bx-star' style="font-size: 3em; color: #ffffff; padding: 6px;"></i>
+            </ng-container>
+          </ng-container>
+        </div>
+        <div class="info-container">
+          <p style="color:white;"> <i class='bx bxs-group' style="font-size: 2em; color: #ffffff;"></i> Máximo {{ tours.maxPeople }} personas </p>
+          <p style="color:white;"> <i class='bx bxs-info-circle' style="font-size: 1.7em; color: #ffffff;"></i> {{tours.language}}
+            <i class='bx bxs-timer' style="font-size: 2em; color: #ffffff; padding-left: 9px"></i> {{ tours.duration }} horas</p>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="textboton">
+        <button mat-stroked-button (click)="onBookNow(tours)" class="boton" style="color:white;">Reserva ahora</button>
+        <button mat-stroked-button (click)="onMoreInfo(tours)" class="boton" style="color:white;">Más info</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
 <button mat-fab color="primary" class="add-tour-button" [routerLink]="'/tour-form'" >+</button>
 </body>
 <footer>

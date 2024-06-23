@@ -12,13 +12,13 @@ import {MatIcon} from "@angular/material/icon";
   templateUrl: './booking.component.html',
   styleUrl: './booking.component.css'
 })
-export class BookingComponent implements OnInit {
+export class BookingComponent {
   displayedColumns: string[] = ['title','image','duration','price','delete'];
   dataSource = new MatTableDataSource<any>();
 
   constructor(private tourService: ToursService) {}
 
-  ngOnInit() {
+  /*ngOnInit() {
     this.tourService.getToursPagados().subscribe(tours => {
       this.dataSource.data = tours;
     })
@@ -27,5 +27,5 @@ export class BookingComponent implements OnInit {
     this.tourService.deleteTourPagado(id).subscribe(()=>{
       this.ngOnInit();
     })
-  }
+  }*/
 }
