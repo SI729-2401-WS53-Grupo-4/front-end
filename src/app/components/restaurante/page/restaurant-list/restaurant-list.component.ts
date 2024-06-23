@@ -49,12 +49,4 @@ export class RestaurantListComponent implements OnInit {
       }
     }
   }
-  cambiarImagen(event: any) {
-    var img = event.target as HTMLImageElement;
-    if (img && img.src && img.src.includes('favorite.png')) {
-      img.src = '/assets/favorite1.png'; // Cambia la imagen a la estrella prendida
-    } else if (img && img.src) {
-      img.src = '/assets/favorite.png'; // Cambia la imagen a la estrella apagada
-    }
-  }
 }

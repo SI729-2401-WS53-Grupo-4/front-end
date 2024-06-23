@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import {MatAnchor} from "@angular/material/button";
+import {MatAnchor, MatButton} from "@angular/material/button";
 import {MatToolbar} from "@angular/material/toolbar";
-import {RouterLink} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 import {NgOptimizedImage} from "@angular/common";
+import {AuthenticationServices} from "../../../components/authentication/iam/services/authentication.services";
 
 @Component({
   selector: 'app-header-content',
@@ -11,11 +12,21 @@ import {NgOptimizedImage} from "@angular/common";
     MatAnchor,
     MatToolbar,
     RouterLink,
-    NgOptimizedImage
+    NgOptimizedImage,
+    MatButton
   ],
   templateUrl: './header-content.component.html',
   styleUrl: './header-content.component.css'
 })
 export class HeaderContentComponent {
+  currentUserName: string = '';
+  isSignedIn: boolean = false;
+  constructor(private router: Router, private authenticationService: AuthenticationServices) {
+    this.authenticationService.currentUsername.subscribe((username) => this.currentUserName = username);
+    this.authenticationService.isSignedIn.subscribe((isSignedIn) => this.isSignedIn = isSignedIn);
+  }
+  onSignOut(){
+    this.authenticationService.signOut()
+  }
 
 }

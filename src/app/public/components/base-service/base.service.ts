@@ -1,13 +1,13 @@
-import { Injectable } from '@angular/core';
+import {Inject, Injectable, InjectionToken} from '@angular/core';
 import { environment } from "../../../../environments/environment";
 import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http";
 import { catchError, Observable, retry, throwError } from "rxjs";
 
+export const BASE_PATH = new InjectionToken<string>('basePath');
 @Injectable({
   providedIn: 'root'
 })
 export class BaseService<T> {
-  basePath: string = `${environment.serverBasePath}`;
   resourceEndpoint: string = '/resources';
 
   httpOptions = {
@@ -16,7 +16,8 @@ export class BaseService<T> {
     })
   }
 
-  constructor(private http: HttpClient) {  }
+  constructor(private http: HttpClient, @Inject(BASE_PATH) private basePath: string) {
+  }
 
   handleError(error: HttpErrorResponse) {
     // Default error handling
@@ -37,25 +38,25 @@ export class BaseService<T> {
 
   // Delete Resource
   delete(id: any) {
-    return this.http.delete(`${this.resourcePath()}/${id}`, this.httpOptions)
+    return this.http.delete(`${this.basePath}/${id}`, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 
   // Update Resource
   update(id: any, item: any): Observable<T> {
-    return this.http.put<T>(`${this.resourcePath()}/${id}`, JSON.stringify(item), this.httpOptions)
+    return this.http.put<T>(`${this.basePath}/${id}`, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 
   // Get All Resources
   getAll(): Observable<T> {
-    return this.http.get<T>(this.resourcePath(), this.httpOptions)
+    return this.http.get<T>(this.basePath, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 
   // Get Single Resource
   get(id: any): Observable<T> {
-    return this.http.get<T>(`${this.resourcePath()}/${id}`, this.httpOptions)
+    return this.http.get<T>(`${this.basePath}/${id}`, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 

@@ -1,2 +1,2 @@
 export const environment = {production: true,
-                              serverBasePath: 'https://6658e836de346625136ad83c.mockapi.io/api/v1'};
+                              serverBasePath: 'http://localhost:8080/Api/v1/TasteTour'};

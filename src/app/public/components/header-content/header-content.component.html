@@ -4,5 +4,7 @@
   <a [routerLink]="'/tour-list'" mat-button>Tours</a>
   <a [routerLink]="'/restaurant-list'" mat-button>Restaurants</a>
   <a [routerLink]="'/profile'" mat-button>Perfil</a>
-  <a [routerLink]="'/login'" mat-raised-button color="accent">Log Out</a>
+  <ng-template #authenticated>
+    <span> Welcome, {{currentUserName}}</span> | <button mat-button (click)="onSignOut()"> Log-out </button>
+  </ng-template>
 </mat-toolbar><br><br><br>

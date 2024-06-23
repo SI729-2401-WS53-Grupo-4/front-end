@@ -7,7 +7,6 @@ import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 })
 export class ToursService {
   private tourSubject = new BehaviorSubject<any>(null);
-  private toursPagados = new BehaviorSubject<any[]>([]);
   private endpoint = `${environment.serverBasePath}/reserva`;
 
   constructor(private http: HttpClient) { }

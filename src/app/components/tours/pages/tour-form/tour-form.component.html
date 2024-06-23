@@ -1,0 +1,56 @@
+<div class="title-container">
+  <h1>Añadir Tour</h1>
+</div>
+<form [formGroup]="tourForm" (ngSubmit)="onSubmit()">
+  <div class="container">
+  <div>
+    <label for="title">Title</label>
+    <input id="title" formControlName="title">
+  </div>
+    <div>
+      <label for="infoDescription">Info Description</label>
+      <textarea id="infoDescription" formControlName="infoDescription"></textarea>
+    </div>
+  <div>
+    <label for="guide">Guide</label>
+    <input id="guide" formControlName="guide">
+  </div>
+  <div>
+    <label for="rating">Rating</label>
+    <input id="rating" formControlName="rating" type="number">
+  </div>
+  <div>
+    <label for="numberOfRatings">Number of Ratings</label>
+    <input id="numberOfRatings" formControlName="numberOfRatings" type="number">
+  </div>
+  <div>
+    <label for="minPrice">Minimum Price</label>
+    <input id="minPrice" formControlName="minPrice" type="number">
+  </div>
+  <div>
+    <label for="currentPeople">Current People</label>
+    <input id="currentPeople" formControlName="currentPeople" type="number">
+  </div>
+  <div>
+    <label for="maxPeople">Max People</label>
+    <input id="maxPeople" formControlName="maxPeople" type="number">
+  </div>
+  <div>
+    <label for="language">Language</label>
+    <input id="language" formControlName="language">
+  </div>
+  <div>
+    <label for="duration">Duration (hours)</label>
+    <input id="duration" formControlName="duration" type="number">
+  </div>
+  <div>
+    <label for="date">Date</label>
+    <input id="date" formControlName="date" type="date">
+  </div>
+    <div>
+      <label for="image">Image URL</label>
+      <input id="image" formControlName="image">
+    </div>
+  </div>
+  <button type="submit">Add tour</button>
+</form>

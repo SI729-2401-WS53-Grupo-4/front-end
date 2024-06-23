@@ -96,3 +96,12 @@ footer {
   font-weight: bold;
   margin: 30px 0;
 }
+.add-tour-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-size: 24px;
+  width: 56px;
+  height: 56px;
+}

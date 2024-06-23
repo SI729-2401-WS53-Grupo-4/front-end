@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';import { TourInfoComponent} from "./components/tours/pages/tour-info/tour-info.component";
+import { HomeComponent } from './components/home/home.component';
+import { TourInfoComponent} from "./components/tours/pages/tour-info/tour-info.component";
 import { ProfileInputsComponent } from "./components/profile/components/profile-inputs/profile-inputs.component";
 import {EditProfileComponent} from "./components/profile/components/edit-profile/edit-profile.component";
 import { PlanOptionsComponent } from "./components/plan/components/plan-options/plan-options.component";
@@ -10,18 +11,19 @@ import { TourPaymentProcessComponent } from "./components/tours/pages/tour-payme
 import { TourPaymentDeniedComponent} from "./components/tours/pages/tour-payment-denied/tour-payment-denied.component";
 import { RestaurantListComponent} from "./components/restaurante/page/restaurant-list/restaurant-list.component";
 import { PlanConfirmComponent} from "./components/plan/components/plan-confirm/plan-confirm.component";
-import {LoginComponent} from "./components/login/login.component";
-import {RegisterComponent} from "./components/register/register.component";
+import {LoginComponent} from "./components/authentication/login/login.component";
+import {RegisterComponent} from "./components/authentication/register/register.component";
 import {BookingComponent} from "./components/booking/booking.component";
+import {TourFormComponent} from "./components/tours/pages/tour-form/tour-form.component";
 import {MainLayoutComponent} from "./public/components/main-layout/main-layout.component";
-
+import {PaymentMethodComponent} from "./components/profile/components/payment-method/payment-method.component";
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
-
+import {authenticationGuard} from "./components/authentication/iam/services/authentication.guard";
 export const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   {path:'', component:MainLayoutComponent,
     children: [
       {path:'home', component:HomeComponent},
@@ -31,6 +33,7 @@ export const routes: Routes = [
       {path:'tour-payment-confirm',component:TourPaymentConfirmComponent},
       {path:'tour-payment-process',component:TourPaymentProcessComponent},
       {path:'tour-payment-denied',component:TourPaymentDeniedComponent},
+      {path:'tour-form',component:TourFormComponent},
 
       {path:'restaurant-list',component:RestaurantListComponent},
 
@@ -38,6 +41,7 @@ export const routes: Routes = [
       {path:'edit-profile', component:EditProfileComponent},
       {path:'plan-options', component:PlanOptionsComponent},
       {path:'plan-confirm', component:PlanConfirmComponent},
+      {path:'payment-method',component:PaymentMethodComponent},
       {path:'booking', component:BookingComponent},
       { path: '', redirectTo: 'home', pathMatch: 'full' }
     ]}];

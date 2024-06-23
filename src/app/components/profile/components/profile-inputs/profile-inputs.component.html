@@ -7,44 +7,50 @@
     <div>
       <b>Nombre</b>
       <div></div>
-      <p>{{ usuario.nombre }}</p>
+      <p>{{ usuario.firstName }}</p>
       <div></div>
       <b>Apellido</b>
       <div></div>
-      <p>{{ usuario.apellido }}</p>
+      <p>{{ usuario.lastName }}</p>
       <div></div>
       <b>Correo</b>
       <div></div>
-      <p>{{ usuario.correo }}</p>
+      <p>{{ usuario.email }}</p>
       <div></div>
       <b>Celular</b>
       <div></div>
-      <p>{{ usuario.celular }}</p>
+      <p>{{ usuario.phone }}</p>
       <div></div>
       <b>Fecha de nacimiento</b>
       <div></div>
-      <p>{{ usuario.fecha }}</p>
+      <p>{{ usuario.birthdate }}</p>
       <div></div>
       <b>Ubicacion</b>
       <div></div>
-      <p>{{ usuario.ubicacion }}</p>
+      <p>{{ usuario.location }}</p>
     </div>
   </mat-grid-tile>
-  <mat-grid-tile *ngFor="let usuario of data">
+  <mat-grid-tile *ngFor="let method of dataM">
     <div>
       <b>Método de pago</b>
       <div></div>
-      <p>{{usuario.method}}</p>
+      <p>{{method.numCard}}</p>
       <div></div>
+      <button mat-flat-button [routerLink]="'/payment-method'" routerLinkActive="active" color="accent">Ver metodo de pago</button>
       <div></div>
-      <b>Plan de suscripción</b>
-      <div></div>
-      <p>{{usuario.suscription}}</p>
-      <div></div>
-      <div></div>
-      <button mat-flat-button color="accent" [routerLink]="'/booking'">Ver reservados</button>
     </div>
   </mat-grid-tile>
+    <div>
+      <b>Plan de suscripción</b>
+      <div></div>
+      <p>suscription</p>
+      <div></div>
+      <div></div>
+    </div>
+    <div>
+      <button mat-flat-button color="accent" [routerLink]="'/booking'">Ver reservados</button>
+    </div>
+
 </mat-grid-list>
 </div>
 <mat-grid-list cols="3" rowHeight="2:1">
@@ -52,7 +58,6 @@
     <div>
       <button mat-flat-button [routerLink]="'/edit-profile'" routerLinkActive="active" color="accent">Editar perfil</button>
       <div></div>
-
     </div>
   </mat-grid-tile>
   <mat-grid-tile>

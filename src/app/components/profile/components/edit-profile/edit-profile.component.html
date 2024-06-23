@@ -8,32 +8,32 @@
         <form #usuarioForm="ngForm" (ngSubmit)="onSubmit()">
           <mat-form-field>
             <mat-label>Nombre</mat-label>
-            <input matInput name="nombre" [(ngModel)]="usuario.nombre" required>
+            <input matInput name="nombre" [(ngModel)]="usuario.firstName" required>
           </mat-form-field>
           <div></div>
           <mat-form-field>
             <mat-label>Apellido</mat-label>
-            <input matInput name="apellido" [(ngModel)]="usuario.apellido" required>
+            <input matInput name="apellido" [(ngModel)]="usuario.lastName" required>
           </mat-form-field>
           <div></div>
           <mat-form-field>
             <mat-label>Correo</mat-label>
-            <input matInput name="correo" [(ngModel)]="usuario.correo" type="email" required>
+            <input matInput name="correo" [(ngModel)]="usuario.email" type="email" required>
           </mat-form-field>
           <div></div>
           <mat-form-field>
             <mat-label>Celular</mat-label>
-            <input matInput name="celular" [(ngModel)]="usuario.celular" required>
+            <input matInput name="celular" [(ngModel)]="usuario.phone" required>
           </mat-form-field>
           <div></div>
           <mat-form-field>
             <mat-label>Fecha de nacimiento</mat-label>
-            <input matInput name="fecha" [(ngModel)]="usuario.fecha" required>
+            <input matInput name="fecha" [(ngModel)]="usuario.birthdate" required>
           </mat-form-field>
           <div></div>
           <mat-form-field>
             <mat-label>Ubicación</mat-label>
-            <input matInput name="ubicacion" [(ngModel)]="usuario.ubicacion" required>
+            <input matInput name="ubicacion" [(ngModel)]="usuario.location" required>
           </mat-form-field>
           <div></div>
           <button mat-raised-button color="accent" type="submit">Guardar cambios</button>

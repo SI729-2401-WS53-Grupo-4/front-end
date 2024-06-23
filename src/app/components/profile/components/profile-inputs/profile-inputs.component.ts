@@ -8,6 +8,8 @@ import {RouterLink} from "@angular/router";
 import {UsuariosService} from '../../services/usuarios.service';
 import {Usuario} from '../../model/usuario.entity';
 import {CommonModule} from '@angular/common';
+import {Method} from "../../model/method.entity";
+import {MethodService} from "../../services/method.service";
 
 @Component({
   selector: 'app-profile-inputs',
@@ -18,16 +20,23 @@ import {CommonModule} from '@angular/common';
 })
 export class ProfileInputsComponent implements OnInit {
   data: Usuario[] = [];
+  dataM: Method[] = [];
 
-  constructor(private usuarioService: UsuariosService) { }
+  constructor(private usuarioService: UsuariosService, private methodService: MethodService) { }
 
   private getAllUsuarios() {
       this.usuarioService.getAll().subscribe((response: any) => {
         this.data = response;
       });
     };
+  private getAllCard(){
+    this.methodService.getAll().subscribe((response: any) =>{
+      this.dataM = response;
+    })
+  };
 
   ngOnInit(): void {
       this.getAllUsuarios();
+      this.getAllCard();
     }
 }
