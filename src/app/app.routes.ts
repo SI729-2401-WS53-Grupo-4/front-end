@@ -13,7 +13,7 @@ import { RestaurantListComponent} from "./components/restaurante/page/restaurant
 import { PlanConfirmComponent} from "./components/plan/components/plan-confirm/plan-confirm.component";
 import {LoginComponent} from "./components/authentication/login/login.component";
 import {RegisterComponent} from "./components/authentication/register/register.component";
-import {BookingComponent} from "./components/booking/booking.component";
+import {BookingComponent} from "./components/booking/components/pages/booking.component";
 import {TourFormComponent} from "./components/tours/pages/tour-form/tour-form.component";
 import {MainLayoutComponent} from "./public/components/main-layout/main-layout.component";
 import {PaymentMethodComponent} from "./components/profile/components/payment-method/payment-method.component";

@@ -7,6 +7,16 @@
   text-align: center;
   gap: 2rem;
 }
+.container2 {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+}
 /*card tour on center*/
 .card-container {
   display: flex;

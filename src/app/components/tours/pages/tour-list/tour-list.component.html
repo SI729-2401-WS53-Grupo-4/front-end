@@ -9,11 +9,11 @@
   <h1>Tours</h1>
 </div>
 
-<div class="container">
+<div class="container2">
   <div class="card-container" *ngFor="let tour of tours">
     <mat-card class="card-tour">
       <mat-card-header class="title">
-        <p>{{ tour.title }}</p>
+        <p>{{ tour.titleTour }}</p>
       </mat-card-header>
       <img mat-card-image [src]="tour.image" alt="Imagen de lugar del tour" width="300" height="200">
       <mat-card-content class="text" style="padding: 0">
@@ -49,7 +49,7 @@
       <mat-card-header class="title">
         <p>{{ tours.titleTour }}</p>
       </mat-card-header>
-      <img mat-card-image [src]="tours.image" alt="Imagen de lugar del tour" width="300" height="200">
+      <img mat-card-image [src]="tours.imageTour" alt="Imagen de lugar del tour" width="300" height="200">
       <mat-card-content class="text" style="padding: 0">
         <div class="stars-container">
           <ng-container *ngFor="let _ of Array(5).fill(0); let i = index">

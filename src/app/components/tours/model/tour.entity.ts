@@ -1,6 +1,6 @@
 export class Tour {
   titleTour: string = '';
-  image: string = '';
+  imageTour: string = '';
   instructor: string = '';
   rating: number = 0;
   numberOfRatings: number = 0;
