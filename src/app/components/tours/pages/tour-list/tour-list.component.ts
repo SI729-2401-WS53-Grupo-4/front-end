@@ -9,6 +9,8 @@ import {OnInit} from "@angular/core";
 import {ToursService} from "../../services/tours.service";
 import {FormBuilder, FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {Tour} from "../../model/tour.entity";
+import {RestaurantsService} from "../../../restaurante/services/restaurantes.service";
+import {Restaurante} from "../../../restaurante/model/restaurante.entity";
 
 @Component({
   selector: 'app-tour-list',
@@ -20,11 +22,12 @@ import {Tour} from "../../model/tour.entity";
 export class TourListComponent implements OnInit{
 
   dataT: Tour[] =[];
+  dataRv: Restaurante[] =[];
 
   tours: any[] = [
     {
       titleTour: 'Coast Food Tour',
-      image: 'https://i0.wp.com/comidasperuanas.com.pe/wp-content/uploads/2023/06/causa-rellena-de-pollo-2.jpg?fit=1900%2C1200&ssl=1',
+      imageTour: 'https://i0.wp.com/comidasperuanas.com.pe/wp-content/uploads/2023/06/causa-rellena-de-pollo-2.jpg?fit=1900%2C1200&ssl=1',
       instructor: 'Andre Rodriguez',
       rating: 4,
       numberOfRatings: 900,
@@ -45,7 +48,7 @@ export class TourListComponent implements OnInit{
     },
     {
       titleTour: 'Lima Food Tour',
-      image: 'https://freewalkingtoursperu.com/wp-content/uploads/2020/06/plaza-de-armas-lima-peru-11.jpg',
+      imageTour: 'https://freewalkingtoursperu.com/wp-content/uploads/2020/06/plaza-de-armas-lima-peru-11.jpg',
       rating: 4.5,
       maxPeople: 12,
       language: 'Ingles/Español',
@@ -66,7 +69,7 @@ export class TourListComponent implements OnInit{
     },
     {
       titleTour: 'Barranco Food Tour',
-      image: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS4Bf6YFaLeWkOSX9xDXbIpOJGSsrkSIChQwegX8ttbIXJQ0Cg8',
+      imageTour: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS4Bf6YFaLeWkOSX9xDXbIpOJGSsrkSIChQwegX8ttbIXJQ0Cg8',
       rating: 5,
       maxPeople: 12,
       language: 'Ingles/Español',

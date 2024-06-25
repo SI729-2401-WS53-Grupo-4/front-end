@@ -20,18 +20,21 @@ export class RestaurantsService extends BaseService<Restaurante>{
 
   private restaurantSubject = new BehaviorSubject<Restaurante[]>([
     {
+      id: 1,
       name: 'Matria Restaurant',
       image: 'https://www.theworlds50best.com/discovery/filestore/jpg/Matria_Food.jpg',
       description: 'Te sorprenderemos con nuestros propios alimentos innovadores y orgánicos de varias zonas del Perú. También tenemos dietas vegetarianas.',
       bookingLink: 'https://www.matriarestaurante.com/'
     },
     {
+      id: 2,
       name: 'Awicha',
       image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/85/10/35/magret-de-pato-rostizado.jpg?w=1200&h=-1&s=1',
       description: 'Vive la experiencia de comer a las afueras en una casa barranca de Lima. Sumérgete en esta aventura natural.',
       bookingLink: 'https://www.awicharestaurante.com/'
     },
     {
+      id: 3,
       name: 'Maras Restaurant',
       image: 'https://media-cdn.tripadvisor.com/media/photo-s/29/13/b7/5a/terraza.jpg',
       description: 'Ofrecemos comida peruana moderna, con sabores típicos y sensaciones nuevas en el público.',

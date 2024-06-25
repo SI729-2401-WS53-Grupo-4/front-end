@@ -15,7 +15,7 @@
       <mat-card-header class="title">
         <p>{{ tour.titleTour }}</p>
       </mat-card-header>
-      <img mat-card-image [src]="tour.image" alt="Imagen de lugar del tour" width="300" height="200">
+      <img mat-card-image [src]="tour.imageTour" alt="Imagen de lugar del tour" width="300" height="200">
       <mat-card-content class="text" style="padding: 0">
         <div class="stars-container">
           <ng-container *ngFor="let _ of Array(5).fill(0); let i = index">
@@ -77,7 +77,6 @@
     </mat-card>
   </div>
 </div>
-<button mat-fab color="primary" class="add-tour-button" [routerLink]="'/tour-form'" >+</button>
 </body>
 <footer>
   <button mat-stroked-button [routerLink]="'/home'" routerLinkActive="active" class="boton" style="color:white;">Volver</button>

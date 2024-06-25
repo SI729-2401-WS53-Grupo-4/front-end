@@ -64,19 +64,22 @@
       <li *ngFor="let item of tour.itemsIncluded"><i class='bx bxs-circle'></i> {{ item }}</li>
     </ul>
   </div>
-<div class="restaurant-inclusions">
-  <div class="incluid">
-    <p>Restaurantes que incluyen en este paquete:</p>
-  </div>
-  <div class="restaurant-image">
-  <img mat-card-image [src]="tour.imageRestaurant" alt="Restaurant image">
-  </div>
-  <div class="title-restaurant">
-  <p> {{tour.titleRestaurant}}</p>
+  <div *ngIf="tour">
+    <div class="restaurant-inclusions" *ngFor="let restaurant of dataRv">
+      <div *ngIf="restaurant.id === restaurantId">
+        <div class="incluid">
+          <p>Restaurantes que incluyen en este paquete:</p>
+        </div>
+        <div class="restaurant-image">
+          <img mat-card-image [src]="restaurant.image" alt="Restaurant image">
+        </div>
+        <div class="title-restaurant">
+          <p>{{ restaurant.name }}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-</div>
-
 </body>
 
 <footer>
