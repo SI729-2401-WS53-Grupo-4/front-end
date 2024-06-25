@@ -18,7 +18,7 @@
       <label for="cardHolder">Titular</label>
       <input type="text" id="cardHolder" [(ngModel)]="method.name" name="cardHolder" required>
     </div>
-    <button type="submit">Añadir método de pago</button>
+    <button type="submit" [routerLink]="'/payment-method'">Añadir método de pago</button>
   </form>
 </div>
 </body>

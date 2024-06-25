@@ -22,9 +22,11 @@ export class BookingComponent implements OnInit{
   constructor(private tourService: ToursService, private bookingService: BookingService) {}
 
   private getAllBooking(){
-    this.bookingService.getAll().subscribe((response: any) => {
-      this.dataB = response;
-    })
+    const bookingId = 1; // Esto es solo un ejemplo, asegúrate de tener el ID correcto
+    this.bookingService.getBookingDetails(bookingId).subscribe((response: any) => {
+      this.dataB.push(response); // Agrega la reserva al array de reservas
+      this.dataSource.data = this.dataB;
+    });
   }
 
   ngOnInit() {

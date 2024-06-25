@@ -4,6 +4,8 @@ import {MatCard, MatCardContent, MatCardHeader, MatCardImage} from "@angular/mat
 import {Router, RouterLink, RouterLinkActive} from "@angular/router";
 import {ToursService} from "../../services/tours.service";
 import {TourListComponent} from "../tour-list/tour-list.component";
+import {BookingService} from "../../../booking/services/booking.service";
+import {Booking} from "../../../booking/model/booking.entity";
 
 @Component({
   selector: 'app-tour-payment-process',
@@ -22,8 +24,10 @@ import {TourListComponent} from "../tour-list/tour-list.component";
 })
 export class TourPaymentProcessComponent {
   tour: any;
+  tourId: number = 1;
+  booking: Booking | null = null;
 
-  constructor(private tourService: ToursService, private router:Router) {}
+  constructor(private tourService: ToursService,private bookingService: BookingService, private router:Router) {}
 
   /*pagar(){
     this.tourService.addTourPagado({title: this.tour.title,
@@ -41,7 +45,19 @@ export class TourPaymentProcessComponent {
       } else {
       }
     });
+    this.getBookingDetails(this.tourId);
   }
+  getBookingDetails(tourId: number) {
+    this.bookingService.getBookingDetails(tourId).subscribe(
+      (response) => {
+        console.log('Booking successful:', response);
+      },
+      (error) => {
+        console.error('Error making booking:', error);
+      }
+    );
+  }
+
   protected readonly Array = Array;
   protected readonly Math = Math;
 }

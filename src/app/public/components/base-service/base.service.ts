@@ -16,7 +16,7 @@ export class BaseService<T> {
     })
   }
 
-  constructor(private http: HttpClient, @Inject(BASE_PATH) private basePath: string) {
+  constructor(protected http: HttpClient, @Inject(BASE_PATH) protected basePath: string) {
   }
 
   handleError(error: HttpErrorResponse) {

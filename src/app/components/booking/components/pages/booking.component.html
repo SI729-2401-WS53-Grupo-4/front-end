@@ -3,13 +3,13 @@
   <!-- Título Column -->
   <ng-container matColumnDef="title">
     <th mat-header-cell *matHeaderCellDef> Nombre del Tour </th>
-    <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.titleTour}} </td>
   </ng-container>
   <!-- Imagen Column -->
   <ng-container matColumnDef="image">
     <th mat-header-cell *matHeaderCellDef></th>
     <td mat-cell *matCellDef="let element">
-      <img mat-card-image [src]="element.image" alt="Tour image" style="width: 100px; height: auto;">
+      <img mat-card-image [src]="element.imageTour" alt="Tour image" style="width: 100px; height: auto;">
     </td>
   </ng-container>
   <!-- Duración Column -->
@@ -20,7 +20,7 @@
   <!-- Precio Column -->
   <ng-container matColumnDef="price">
     <th mat-header-cell *matHeaderCellDef> Precio </th>
-    <td mat-cell *matCellDef="let element"> ${{element.price}} </td>
+    <td mat-cell *matCellDef="let element"> ${{element.minPrice}} </td>
   </ng-container>
   <!-- Delete Column -->
   <ng-container matColumnDef="delete">

@@ -4,5 +4,4 @@ export class Restaurante {
   image: string = '';
   description: string = '';
   bookingLink: string = '';
-
 }

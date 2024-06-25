@@ -1,39 +1,35 @@
-import {Component, OnInit} from '@angular/core';
+import { Component } from '@angular/core';
 import { ButtonModule} from "primeng/button";
 import {RouterLink, Router} from "@angular/router";
 import {LocalstorageService} from "../../../public/components/local-storage/localstorage.service";
-import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
-import {NgClass, NgIf} from "@angular/common";
-import {AuthenticationServices} from "../iam/services/authentication.services";
-import {SignInRequest} from "../iam/model/sign-in.request";
+import {FormsModule} from "@angular/forms";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ButtonModule, RouterLink, FormsModule, NgIf, ReactiveFormsModule, NgClass],
+  imports: [ButtonModule, RouterLink, FormsModule, NgIf],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent implements OnInit{
-  form!: FormGroup;
-  submitted = false;
-  constructor(private builder:FormBuilder, private authenticationService: AuthenticationServices) {
-  }
+export class LoginComponent {
+  username: string = '';
+  password: string = '';
+  errorMessage: string = '';
 
-  ngOnInit() {
-    this.form = this.builder.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required]
-    });
-  }
+  constructor(private localStorage: LocalstorageService, private router:Router) {}
 
-  onSubmit(){
-    if(this.form.invalid) return;
-    let username = this.form.value.username;
-    let password = this.form.value.password;
-    const signInRequest = new SignInRequest(username, password);
-    this.authenticationService.signIn(signInRequest);
-    this.submitted = true;
-  }
+  login() {
+    const credentials = {
+      username: this.username,
+      password: this.password
+    };
 
+    if (this.localStorage.login(credentials)) {
+      console.log('User logged in successfully!');
+      this.router.navigate(['/home']);
+    } else {
+      this.errorMessage = 'Invalid username or password!';
+    }
+  }
 }

@@ -18,11 +18,10 @@ import {MainLayoutComponent} from "./public/components/main-layout/main-layout.c
 import {PaymentMethodComponent} from "./components/profile/components/payment-method/payment-method.component";
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
-import {authenticationGuard} from "./components/authentication/iam/services/authentication.guard";
 export const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {path:'', component:MainLayoutComponent,
     children: [
       {path:'home', component:HomeComponent},
